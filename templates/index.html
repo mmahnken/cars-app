@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>YO THIS IS COOL</title>
+</head>
+<body>
+    <h1>Here are some brands.</h1>
+
+    <h2>Search for a brand.</h2>
+    <div>
+        <form action="/search" method="GET">
+            <input type="text" name="search_term">
+            <input type="submit" value="Search!">
+        </form>
+    </div>
+    
+    <ul>
+    {% for b in brands %}
+         
+        <li>{{ b.name }}</li>
+        <ul>
+         {% for m in b.models %}
+             <li>{{ m.name }}</li>
+         {% endfor %}
+        </ul>
+    {% endfor %}
+    </ul>
+</body>
+</html>

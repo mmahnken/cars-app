@@ -1,0 +1,12 @@
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    {% for r in results %}
+        {{ r.display_brand() }}
+        <p>has {{ r.get_num_models() }}  models</p>
+    {% endfor %}
+</body>
+</html>
